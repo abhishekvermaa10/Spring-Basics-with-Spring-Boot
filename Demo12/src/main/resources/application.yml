@@ -1,0 +1,21 @@
+spring:
+ profiles:
+  active: prod
+---
+spring:
+ config:
+  activate:
+   on-profile: dev 
+logging:
+ file:
+  path: dev/logs
+  name: ${logging.file.path}/Demo.log
+---
+spring:
+ config:
+  activate:
+   on-profile: prod 
+logging:
+ file:
+  path: prod/logs
+  name: ${logging.file.path}/Demo.log
