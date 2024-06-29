@@ -31,7 +31,7 @@
     Demos have been explained in an easy way on my YouTube channel <a
         href="https://www.youtube.com/@abhishekvermaa10?sub_confirmation=1" target="_blank">Abhishek Verma</a>. Link for
     the
-    video is <a href="https://www.youtube.com/playlist?list=PLJDwhlqmpSfNYPqMMqNj7DXl41fnTVJuY"
+    video is <a href="https://www.youtube.com/playlist?list=PLJDwhlqmpSfO7BUlQk_di-86igrzgnsGo"
         target="_blank">Spring Basics with Spring Boot</a>.
 </p>
 
