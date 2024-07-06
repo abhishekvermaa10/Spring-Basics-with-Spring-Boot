@@ -8,6 +8,7 @@
 <hr>
 <ol style="text-align: left;">
     <li>Why industry level projects use Spring?</li>
+	<li>Inversion of Control</li>
 </ol>
 
 <h3 style="text-align: left;">Pre-Requisite</h3>
