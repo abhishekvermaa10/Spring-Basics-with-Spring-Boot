@@ -2,3 +2,4 @@ Demo0 - Why industry level projects use Spring?
 Demo1 - Inversion of Control
 Demo2 - Constructor-based Dependency Injection
 Demo3 - Setter-based Dependency Injection
+Demo4 - AutoScanning and Stereotype annotations
