@@ -3,3 +3,4 @@ Demo1 - Inversion of Control
 Demo2 - Constructor-based Dependency Injection
 Demo3 - Setter-based Dependency Injection
 Demo4 - AutoScanning and Stereotype annotations
+Demo5 - Autowired and Value annotations
