@@ -13,6 +13,7 @@
 	<li>Setter-based Dependency Injection</li>
 	<li>AutoScanning and Stereotype annotations</li>
 	<li>Autowired and Value annotations</li>
+	<li>Primary and Qualifier annotations</li>
 </ol>
 
 <h3 style="text-align: left;">Pre-Requisite</h3>
