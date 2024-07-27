@@ -5,3 +5,4 @@ Demo3 - Setter-based Dependency Injection
 Demo4 - AutoScanning and Stereotype annotations
 Demo5 - Autowired and Value annotations
 Demo6 - Primary and Qualifier annotations
+Demo7 - First Spring Boot Project
