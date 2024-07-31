@@ -15,6 +15,7 @@
 	<li>Autowired and Value annotations</li>
 	<li>Primary and Qualifier annotations</li>
 	<li>First Spring Boot Project</li>
+	<li>CommandLineRunner in Spring Boot</li>
 </ol>
 
 <h3 style="text-align: left;">Pre-Requisite</h3>
