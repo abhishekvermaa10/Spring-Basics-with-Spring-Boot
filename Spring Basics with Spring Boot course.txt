@@ -8,3 +8,4 @@ Demo6 - Primary and Qualifier annotations
 Demo7 - First Spring Boot Project
 Demo8 - CommandLineRunner in Spring Boot
 Demo9 - Scope in Spring Boot
+Demo10 - Logging in Spring Boot
