@@ -18,6 +18,7 @@
 	<li>CommandLineRunner in Spring Boot</li>
 	<li>Scope in Spring Boot</li>
 	<li>Logging in Spring Boot</li>
+	<li>Reading Properties in Spring Boot</li>
 </ol>
 
 <h3 style="text-align: left;">Pre-Requisite</h3>
