@@ -10,3 +10,4 @@ Demo8 - CommandLineRunner in Spring Boot
 Demo9 - Scope in Spring Boot
 Demo10 - Logging in Spring Boot
 Demo11 - Reading Properties in Spring Boot
+Demo12 - Profiles in Spring Boot
