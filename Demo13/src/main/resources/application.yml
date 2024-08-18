@@ -1,0 +1,28 @@
+logging:
+  file:
+    name: ${logging.file.path}/${spring.application.name}.log
+spring:
+  application:
+    name: Demo
+  profiles:
+    active: local
+---
+spring:
+  config:
+    activate:
+      on-profile: local
+logging:
+  file:
+    path: logs/local
+---
+spring:
+  config:
+    activate:
+      on-profile: prod
+logging:
+  file:
+    path: logs/prod
+  logback:
+    rollingpolicy:
+      file-name-pattern: ${logging.file.path}/${spring.application.name}-%d{yyyy-MM-dd}-%i.log
+      max-file-size: 10MB
