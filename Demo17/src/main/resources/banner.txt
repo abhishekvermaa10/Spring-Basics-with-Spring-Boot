@@ -1,0 +1,10 @@
+  ______          __                             _  __              
+.' ____ \        [  |                           (_)[  |             
+| (___ \_|__   _  | |.--.  .--.   .---.  _ .--. __  | |.--.  .---.  
+ _.____`.[  | | | | '/'`\ ( (`\] / /'`\][ `/'`\|  | | '/'`\ Y /__\\ 
+| \____) || \_/ |,|  \__/ |`'.'. | \__.  | |    | | |  \__/ | \__., 
+ \______.''.__.'_[__;.__.'[\__) )'.___.'[___]  [___|__;.__.' '.__.' 
+                                                                    
+${spring.application.name} is powered by Spring Boot ${spring-boot.version}
+Banner Source is https://devops.datenkollektiv.de/banner.txt/index.html
+Type used is Varsity

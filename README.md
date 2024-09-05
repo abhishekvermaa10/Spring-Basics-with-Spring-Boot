@@ -24,6 +24,7 @@
 	<li>Aspect Oriented Programming(AOP)</li>
 	<li>Unit Testing in Spring Boot</li>
 	<li>DevTools</li>
+	<li>Custom Banner</li>
 </ol>
 
 <h3 style="text-align: left;">Pre-Requisite</h3>
