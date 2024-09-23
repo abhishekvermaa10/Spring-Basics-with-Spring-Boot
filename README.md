@@ -25,6 +25,7 @@
 	<li>Unit Testing in Spring Boot</li>
 	<li>DevTools</li>
 	<li>Custom Banner</li>
+	<li>Capstone Project - Petistaan</li>
 </ol>
 
 <h3 style="text-align: left;">Pre-Requisite</h3>
