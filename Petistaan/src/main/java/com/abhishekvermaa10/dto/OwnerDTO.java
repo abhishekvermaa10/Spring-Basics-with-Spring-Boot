@@ -9,6 +9,7 @@ import com.abhishekvermaa10.enums.Gender;
  *
  */
 public class OwnerDTO {
+	
 	private int id;
 	private String firstName;
 	private String lastName;
@@ -103,4 +104,5 @@ public class OwnerDTO {
 					+ "]";
 		}
 	}
+	
 }

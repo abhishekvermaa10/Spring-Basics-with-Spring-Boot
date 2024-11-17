@@ -11,6 +11,7 @@ import com.abhishekvermaa10.exception.OwnerNotFoundException;
  *
  */
 public interface OwnerService {
+	
 	void saveOwner(OwnerDTO ownerDTO) throws DuplicateOwnerIdException;
 
 	OwnerDTO findOwner(int ownerId) throws OwnerNotFoundException;
@@ -20,4 +21,7 @@ public interface OwnerService {
 	void deleteOwner(int ownerId) throws OwnerNotFoundException;
 
 	List<OwnerDTO> findAllOwners();
+	
+	List<Object[]> findIdAndFirstNameAndLastNameAndPetNameOfPaginatedOwners(int pageNumber, int numberOfRecordsPerPage);
+
 }

@@ -10,6 +10,7 @@ import com.abhishekvermaa10.enums.PetType;
  *
  */
 public class PetDTO {
+	
 	private int id;
 	private String name;
 	private Gender gender;
@@ -65,4 +66,5 @@ public class PetDTO {
 			return "PetDTO [id=" + id + ", name=" + name + ", gender=" + gender + ", type=" + type + "]";
 		}
 	}
+	
 }

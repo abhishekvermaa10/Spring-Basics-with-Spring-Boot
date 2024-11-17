@@ -14,6 +14,7 @@ import com.abhishekvermaa10.service.PetService;
  */
 @Service
 public class PetServiceImpl implements PetService {
+	
 	private final PetRepository petRepository;
 	private final String petNotFound;
 
@@ -27,4 +28,11 @@ public class PetServiceImpl implements PetService {
 		return petRepository.findById(petId)
 				.orElseThrow(() -> new PetNotFoundException(String.format(petNotFound, petId)));
 	}
+	
+	@Override
+	public Double findAverageAgeOfPet() {
+		return petRepository.findAverageAgeOfPet()
+				.orElse(0.0);
+	}
+	
 }

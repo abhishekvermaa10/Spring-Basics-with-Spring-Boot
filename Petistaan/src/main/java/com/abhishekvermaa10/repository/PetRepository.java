@@ -9,5 +9,9 @@ import com.abhishekvermaa10.dto.PetDTO;
  *
  */
 public interface PetRepository {
+	
 	Optional<PetDTO> findById(int petId);
+
+	Optional<Double> findAverageAgeOfPet();
+	
 }

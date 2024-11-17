@@ -10,6 +10,7 @@ import com.abhishekvermaa10.dto.OwnerDTO;
  *
  */
 public interface OwnerRepository {
+	
 	void save(OwnerDTO ownerDTO);
 
 	Optional<OwnerDTO> findById(int ownerId);
@@ -19,4 +20,7 @@ public interface OwnerRepository {
 	void deleteById(int ownerId);
 
 	List<OwnerDTO> findAll();
+	
+	List<Object[]> findIdAndFirstNameAndLastNameAndPetName(int pageNumber, int pageSize);
+	
 }

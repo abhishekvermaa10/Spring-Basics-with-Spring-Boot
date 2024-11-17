@@ -17,6 +17,7 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Component
 public class LogAspect {
+	
 	private static final Logger LOGGER = LoggerFactory.getLogger(LogAspect.class);
 
 	@Pointcut("execution(* com.abhishekvermaa10.service.impl.*.*(..))")
@@ -38,4 +39,5 @@ public class LogAspect {
 	public void logAfterThrowingAdvice(JoinPoint joinPoint, Exception exception) {
 		LOGGER.error("Completed {} with exception as {}", joinPoint.getSignature(), exception.getMessage());
 	}
+	
 }

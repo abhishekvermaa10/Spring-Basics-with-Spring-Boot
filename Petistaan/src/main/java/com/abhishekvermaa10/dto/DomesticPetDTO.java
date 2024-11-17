@@ -8,6 +8,7 @@ import java.util.Objects;
  *
  */
 public class DomesticPetDTO extends PetDTO {
+	
 	private LocalDate birthDate;
 
 	public LocalDate getBirthDate() {
@@ -28,4 +29,5 @@ public class DomesticPetDTO extends PetDTO {
 					+ getType() + ", birthDate=" + birthDate + "]";
 		}
 	}
+	
 }

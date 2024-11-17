@@ -23,6 +23,7 @@ import com.abhishekvermaa10.util.InputUtil;
 @PropertySource("classpath:messages.properties")
 @SpringBootApplication
 public class Demo implements CommandLineRunner {
+	
 	private final OwnerService ownerService;
 	private final PetService petService;
 	private static final Logger LOGGER = LoggerFactory.getLogger(Demo.class);
@@ -48,35 +49,51 @@ public class Demo implements CommandLineRunner {
 					PetDTO petDTO = InputUtil.acceptPetDetailsToSave(scanner);
 					ownerDTO.setPetDTO(petDTO);
 					ownerService.saveOwner(ownerDTO);
-					System.out.println("Owner has been saved successfully.");
+					System.out.println("Saved owner successfully.");
 					break;
 				case 2:
 					int ownerId = InputUtil.acceptOwnerIdToOperate(scanner);
 					ownerDTO = ownerService.findOwner(ownerId);
-					System.out.println("Owner has been fetched successfully.");
+					System.out.println(String.format("Found owner with ownerId %s.", ownerId));
 					System.out.println(ownerDTO);
 					break;
 				case 3:
 					ownerId = InputUtil.acceptOwnerIdToOperate(scanner);
 					String petName = InputUtil.acceptPetDetailsToUpdate(scanner);
 					ownerService.updatePetDetails(ownerId, petName);
-					System.out.println("Pet details of owner have been updated successfully.");
+					System.out.println(
+							String.format("Updated petName to %s for owner with ownerId %s.", petName, ownerId));
 					break;
 				case 4:
 					ownerId = InputUtil.acceptOwnerIdToOperate(scanner);
 					ownerService.deleteOwner(ownerId);
-					System.out.println("Owner has been deleted successfully.");
+					System.out.println(String.format("Deleted owner with ownerId %s.", ownerId));
 					break;
 				case 5:
 					List<OwnerDTO> ownerDTOList = ownerService.findAllOwners();
-					System.out.println("There are " + ownerDTOList.size() + " owners.");
+					System.out.println(String.format("There are %s owners.", ownerDTOList.size()));
 					ownerDTOList.forEach(System.out::println);
 					break;
 				case 6:
 					int petId = InputUtil.acceptPetIdToOperate(scanner);
 					petDTO = petService.findPet(petId);
-					System.out.println("Pet has been fetched successfully.");
+					System.out.println(String.format("Found pet with petId %s.", petId));
 					System.out.println(petDTO);
+					break;
+				case 7:
+					double averageAge = petService.findAverageAgeOfPet();
+					System.out.println(String.format("Average age of pet is %s years.", averageAge));
+					break;
+				case 8:
+					int pageNumber = InputUtil.acceptPageNumberToOperate(scanner);
+					int pageSize = InputUtil.acceptPageSizeToOperate(scanner);
+					List<Object[]> detailsList = ownerService
+							.findIdAndFirstNameAndLastNameAndPetNameOfPaginatedOwners(pageNumber - 1, pageSize);
+					System.out.println(
+							String.format("Showing %s records on page number %s.", detailsList.size(), pageNumber));				
+					detailsList.forEach(details -> System.out
+							.println(String.format("ownerId: %s, firstName: %s, lastName: %s, petName: %s", details[0],
+									details[1], details[2], details[3])));
 					break;
 				default:
 					System.out.println("Invalid option entered.");

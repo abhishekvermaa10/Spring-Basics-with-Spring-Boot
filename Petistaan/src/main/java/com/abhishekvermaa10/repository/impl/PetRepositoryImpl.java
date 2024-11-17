@@ -6,6 +6,7 @@ import static com.abhishekvermaa10.enums.PetType.CAT;
 import static com.abhishekvermaa10.enums.PetType.DOG;
 
 import java.time.LocalDate;
+import java.time.Period;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -26,6 +27,7 @@ import jakarta.annotation.PostConstruct;
  */
 @Repository
 public class PetRepositoryImpl implements PetRepository {
+	
 	private List<PetDTO> petDTOList;
 
 	public PetRepositoryImpl() {
@@ -72,6 +74,21 @@ public class PetRepositoryImpl implements PetRepository {
 
 	@Override
 	public Optional<PetDTO> findById(int petId) {
-		return petDTOList.stream().filter(pet -> pet.getId() == petId).findFirst();
+		return petDTOList.stream()
+				.filter(pet -> pet.getId() == petId)
+				.findFirst();
 	}
+
+	@Override
+	public Optional<Double> findAverageAgeOfPet() {
+		 return petDTOList.stream()
+		            .filter(pet -> pet instanceof DomesticPetDTO)
+		            .map(pet -> ((DomesticPetDTO) pet).getBirthDate())
+		            .mapToDouble(birthDate -> Period.between(birthDate, LocalDate.now()).getYears())
+		            .average()
+		            .stream()
+		            .boxed()
+		            .findFirst();
+	}
+	
 }

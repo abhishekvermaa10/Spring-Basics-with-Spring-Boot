@@ -7,6 +7,7 @@ import java.util.Objects;
  *
  */
 public class WildPetDTO extends PetDTO {
+	
 	private String birthPlace;
 
 	public String getBirthPlace() {
@@ -27,4 +28,5 @@ public class WildPetDTO extends PetDTO {
 					+ getType() + ", birthPlace=" + birthPlace + "]";
 		}
 	}
+	
 }

@@ -25,6 +25,7 @@ import jakarta.annotation.PostConstruct;
  */
 @Repository
 public class OwnerRepositoryImpl implements OwnerRepository {
+	
 	private List<OwnerDTO> ownerDTOList;
 
 	public OwnerRepositoryImpl() {
@@ -76,13 +77,17 @@ public class OwnerRepositoryImpl implements OwnerRepository {
 
 	@Override
 	public Optional<OwnerDTO> findById(int ownerId) {
-		return ownerDTOList.stream().filter(owner -> owner.getId() == ownerId).findFirst();
+		return ownerDTOList.stream()
+				.filter(owner -> owner.getId() == ownerId)
+				.findFirst();
 	}
 
 	@Override
 	public void updatePetDetails(int ownerId, String petName) {
-		ownerDTOList.stream().filter(owner -> owner.getId() == ownerId).findFirst()
-				.ifPresent(ownerDTO -> ownerDTO.getPetDTO().setName(petName));
+		ownerDTOList.stream()
+		.filter(owner -> owner.getId() == ownerId)
+		.findFirst()
+		.ifPresent(ownerDTO -> ownerDTO.getPetDTO().setName(petName));
 	}
 
 	@Override
@@ -94,4 +99,14 @@ public class OwnerRepositoryImpl implements OwnerRepository {
 	public List<OwnerDTO> findAll() {
 		return ownerDTOList;
 	}
+
+	@Override
+	public List<Object[]> findIdAndFirstNameAndLastNameAndPetName(int pageNumber, int pageSize) {
+		return ownerDTOList.stream()
+				.skip((long) pageNumber * pageSize)
+	            .limit(pageSize)
+				.map(ownerDTO -> new Object[] {ownerDTO.getId(), ownerDTO.getFirstName(), ownerDTO.getLastName(), ownerDTO.getPetDTO().getName()})
+				.toList();
+	}
+	
 }

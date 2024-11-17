@@ -17,6 +17,7 @@ import com.abhishekvermaa10.enums.PetType;
  *
  */
 public class InputUtil {
+	
 	private InputUtil() {
 		
 	}
@@ -28,9 +29,10 @@ public class InputUtil {
 		System.out.println("Press 4 to delete owner details.");
 		System.out.println("Press 5 to fetch all owners.");
 		System.out.println("Press 6 to fetch pet details.");
+		System.out.println("Press 7 to find average age of pet.");
+		System.out.println("Press 8 to find specific details using pagination.");
 		int menuOption = scanner.nextInt();
-		if (menuOption == 1 || menuOption == 2 || menuOption == 3 || menuOption == 4 || menuOption == 5
-				|| menuOption == 6) {
+		if (menuOption >= 1 && menuOption <= 8) {
 			return menuOption;
 		} else {
 			System.out.println("Invalid option entered.");
@@ -134,9 +136,32 @@ public class InputUtil {
 		System.out.println("Enter id of pet:");
 		return scanner.nextInt();
 	}
+	
+	public static int acceptPageSizeToOperate(Scanner scanner) {
+		System.out.println("Enter page size:");
+		int pageSize = scanner.nextInt();
+		if (pageSize > 0) {
+			return pageSize;
+		} else {
+			System.out.println("Page size must be greater than 0.");
+			return acceptPageSizeToOperate(scanner);
+		}
+	}
+
+	public static int acceptPageNumberToOperate(Scanner scanner) {
+		System.out.println("Enter page number:");
+		int pageNumber = scanner.nextInt();
+		if (pageNumber > 0) {
+			return pageNumber;
+		} else {
+			System.out.println("Page number must be greater than 0.");
+			return acceptPageNumberToOperate(scanner);
+		}
+	}
 
 	private static LocalDate convertStringToDate(String stringDate) {
 		DateTimeFormatter format = DateTimeFormatter.ofPattern("dd-MM-yyyy");
 		return LocalDate.parse(stringDate, format);
 	}
+	
 }
