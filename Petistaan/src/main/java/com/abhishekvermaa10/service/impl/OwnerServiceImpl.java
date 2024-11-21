@@ -51,7 +51,7 @@ public class OwnerServiceImpl implements OwnerService {
 		OwnerDTO ownerDTO = ownerRepository.findById(ownerId)
 				.orElseThrow(() -> new OwnerNotFoundException(String.format(ownerNotFound, ownerId)));
 		ownerDTO.getPetDTO().setName(petName);
-		ownerRepository.save(ownerDTO);
+		ownerRepository.updatePetDetails(ownerDTO.getId(), petName);
 	}
 
 	@Override
