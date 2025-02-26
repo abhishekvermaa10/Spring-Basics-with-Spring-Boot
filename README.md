@@ -41,7 +41,8 @@
 <p align="justify">
     Before diving into Spring Basics with Spring Boot, ensure you're comfortable with the following concepts:
 <ul>
-    <li>Java Basics</li>
+    <li><a href="https://abhishekvermaa10.github.io/Java Basics"
+        target="_blank">Java Basics</a></li>
     <li><a href="https://www.youtube.com/playlist?list=PLJDwhlqmpSfP5xBfI-41j3gNZ6GAsrxD-"
         target="_blank">Java Advanced</a></li>
     <li><a href="https://www.youtube.com/playlist?list=PLJDwhlqmpSfMNgiOg0xyg4hVsPcJUh4jE"
